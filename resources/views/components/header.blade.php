@@ -1,33 +1,3 @@
-{{-- <header class="px-6 py-8">
-    <nav class=" bg-white">
-        <div class="hidden md:show space-x-8 md:flex md:justify-between md:items-center menu">
-            <div class="flex flex-col md:flex-row md:items-center gap-4 ">
-                <a href="/" class="text-sm font-bold uppercase nav__link">Home</a>
-                <a href="/projects" class="text-sm font-bold uppercase nav__link">Projects</a>
-                <a href="/about" class="text-sm font-bold uppercase nav__link">About</a>
-            </div>
-            <div class="mt-4 md:mt-0 menu">
-                @auth
-                    <span class="text-xs font-bold uppercase"> {{ auth()->user()->name }} </span>
-                    @if (auth()->user()->isAdmin())
-                        <a href="/admin" class="ml-3 text-xs font-bold uppercase nav__link">Admin</a>
-                    @endif
-                    <a href="/logout" class="ml-3 text-xs font-bold uppercase nav__link">Logout</a>
-                @else
-                    <a href="/login" class="ml-3 text-xs font-bold uppercase nav__link">Log In</a>
-                @endauth
-            </div>
-        </div>
-        <div class="flex justify-end nav-toggle md:hidden btn">
-            <div class="space-y-2">
-                <span class="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
-                <span class="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
-                <span class="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
-            </div>
-        </div>
-    </nav>
-</header> --}}
-
 <header class="px-6 py-8">
     <nav class="bg-white">
         <div class="flex justify-end md:hidden">

@@ -43,11 +43,6 @@
                 @else
                     <div>Nothing to showcase, yet.</div>
                 @endif
-                {{-- @if (count($projects))
-                    <div class="text-xs mt-4 w-full text-right">{{ $projects->links() }}</div>
-                @else
-                    <div>Nothing to showcase, yet.</div>
-                @endif --}}
             </div>
         </div>
     </x-slot>

@@ -22,13 +22,16 @@
                                 </td>
                                 <td>
                                     <a href="/admin/projects/{{ $project->id }}/edit"
-                                        class="hover:text-green-400">Edit</a> |
+                                        class="hover:text-green-400">Edit</a>
+
+                                    |
                                     <form method="POST" action="admin/projects/{{ $project->id }}/delete"
                                         class="inline hover:text-red-500">
                                         @csrf
                                         @method('delete')
                                         <button type="submit">Delete</button>
                                     </form>
+
                                 </td>
                             </tr>
                         @endforeach
@@ -67,10 +70,13 @@
                                 </td>
                                 <td>
                                     <a href="/admin/users/{{ $user->id }}/edit"
-                                        class="hover:text-green-400">Edit</a> |
-                                    <form method="POST" action="admin/users/{{ $user->id }}/delete"
-                                        class="inline hover:text-red-500"> @csrf @method('delete') <button
-                                            type="submit">Delete</button></form>
+                                        class="hover:text-green-400">Edit</a>
+                                    @if (auth()->user()->id != $user->id)
+                                        |
+                                        <form method="POST" action="admin/users/{{ $user->id }}/delete"
+                                            class="inline hover:text-red-500"> @csrf @method('delete') <button
+                                                type="submit">Delete</button></form>
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach

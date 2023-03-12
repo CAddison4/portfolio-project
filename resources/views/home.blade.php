@@ -14,7 +14,7 @@
                     </div>
                 @endif
             @endforEach
-            <div class="grid md:grid-cols-3 gap-2 max-w-2xl">
+            <div class="max-w-2xl md:grid md:grid-cols-3 md:gap-2">
                 @foreach ($projects as $project)
                     @if ($project->id == 2 || $project->id == 3 || $project->id == 5)
                         <div class="bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
